@@ -1,0 +1,3 @@
+npm i  axios react-bootstrap react-helmet react-paypal-button-v2 react-redux react-router-bootstrap react-router-dom redux redux-devtools-extension redux-thunk
+
+
