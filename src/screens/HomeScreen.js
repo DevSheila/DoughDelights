@@ -23,7 +23,10 @@ function HomeScreen({match}) {
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber));
+    console.log(products)
   }, [dispatch, keyword, pageNumber]);
+
+ 
 
   return (
     <>
@@ -44,9 +47,14 @@ function HomeScreen({match}) {
                     <Message variant="danger">{error}</Message>
                   ) : (
                     <>
-                      {products && products.map((product) => (
-                        <ProductItem key={product._id} product={product} />
-                      ))}
+                      {products?.length > 0 ? (
+                        products?.map((product) => (
+                        
+                          <ProductItem key={product._id} product={product} />
+                        ))
+                      ) : (
+                        <div>loading...</div>
+                      )}
                     </>
                   )}
 
