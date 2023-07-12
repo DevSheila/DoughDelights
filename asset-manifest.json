@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/DoughDelights/static/css/main.31d6cfe0.css",
+    "main.js": "/DoughDelights/static/js/main.b5edaabb.js",
+    "index.html": "/DoughDelights/index.html",
+    "main.b5edaabb.js.map": "/DoughDelights/static/js/main.b5edaabb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.b5edaabb.js"
+  ]
+}
