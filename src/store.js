@@ -73,7 +73,6 @@ const initialState = {
   userLogin: { userInfo: userInfoFromStorage },
 };
 
-
 const middleware = [thunk];
 
 const store = createStore(
