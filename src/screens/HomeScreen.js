@@ -10,7 +10,8 @@ import ProductItem from "../components/ProductItem";
 import ProductsSideBar from "../components/ProductsSideBar";
 import MiniLoader from "../components/MiniLoader";
 
-function HomeScreen({ match }) {
+
+function HomeScreen({match}) {
   const keyword = match.params.keyword;
 
   const pageNumber = match.params.pageNumber || 1;
@@ -43,10 +44,9 @@ function HomeScreen({ match }) {
                     <Message variant="danger">{error}</Message>
                   ) : (
                     <>
-                      {products &&
-                        products.map((product) => (
-                          <ProductItem key={product._id} product={product} />
-                        ))}
+                      {products.map((product) => (
+                        <ProductItem key={product._id} product={product} />
+                      ))}
                     </>
                   )}
 
