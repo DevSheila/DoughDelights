@@ -10,8 +10,7 @@ import ProductItem from "../components/ProductItem";
 import ProductsSideBar from "../components/ProductsSideBar";
 import MiniLoader from "../components/MiniLoader";
 
-
-function HomeScreen({match}) {
+function HomeScreen({ match }) {
   const keyword = match.params.keyword;
 
   const pageNumber = match.params.pageNumber || 1;
@@ -23,10 +22,7 @@ function HomeScreen({match}) {
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber));
-    console.log(products)
   }, [dispatch, keyword, pageNumber]);
-
- 
 
   return (
     <>
@@ -47,14 +43,10 @@ function HomeScreen({match}) {
                     <Message variant="danger">{error}</Message>
                   ) : (
                     <>
-                      {products?.length > 0 ? (
-                        products?.map((product) => (
-                        
+                      {products &&
+                        products.map((product) => (
                           <ProductItem key={product._id} product={product} />
-                        ))
-                      ) : (
-                        <div>loading...</div>
-                      )}
+                        ))}
                     </>
                   )}
 
