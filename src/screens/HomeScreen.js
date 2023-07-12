@@ -44,7 +44,7 @@ function HomeScreen({match}) {
                     <Message variant="danger">{error}</Message>
                   ) : (
                     <>
-                      {products?.map((product) => (
+                      {products && products.map((product) => (
                         <ProductItem key={product._id} product={product} />
                       ))}
                     </>
